@@ -6,7 +6,7 @@ import Categories from "../components/categories";
 
 function Productos() {
   return (
-    <Stack mt={20} px={5}>
+    <Stack mt="120px" px={5}>
       <Heading as="h1" color="color1.50">
         Productos
       </Heading>

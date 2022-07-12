@@ -1,4 +1,8 @@
-import {Link, Text, Grid, Image, Flex} from "@chakra-ui/react";
+import {Link, Grid, Flex} from "@chakra-ui/react";
+import Image from "next/image";
+import {Image as ImageChakra} from "@chakra-ui/react";
+
+import Logo from "../assets/logoCup.png";
 
 function Footer() {
   const linksItems = [
@@ -10,13 +14,10 @@ function Footer() {
       text: "Productos",
       path: "/productos",
     },
-    {
-      text: "Nosotros",
-      path: "/",
-    },
+
     {
       text: "Contacto",
-      path: "/",
+      path: "/contacto",
     },
   ];
 
@@ -31,14 +32,9 @@ function Footer() {
       textAlign="center"
     >
       <Link color="white" href="/" style={{textDecoration: "none"}}>
-        <Text fontSize="17px" fontWeight="600">
-          Cupcustom
-        </Text>
-        <Text fontSize="17px" fontWeight="600">
-          sublimaciones
-        </Text>
+        <Image height="50px" src={Logo} width="120px" />
       </Link>
-      <Grid gap={5} gridTemplateColumns={{lg: "repeat(2, 1fr)"}}>
+      <Grid alignContent="center" gap={5} gridTemplateColumns={{lg: "repeat(3, 1fr)"}}>
         {linksItems.map((item) => (
           <Link
             key={item.text}
@@ -54,7 +50,7 @@ function Footer() {
       </Grid>
       <Flex justifyContent="center">
         <Link mx={3}>
-          <Image
+          <ImageChakra
             backgroundColor="color1.50"
             p={2}
             rounded="100%"
@@ -63,7 +59,7 @@ function Footer() {
           />
         </Link>
         <Link mx={3}>
-          <Image
+          <ImageChakra
             backgroundColor="color1.50"
             p={2}
             rounded="100%"
