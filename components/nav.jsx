@@ -62,7 +62,7 @@ function Nav() {
         display={{base: "grid", md: "grid", lg: "flex"}}
         gap={10}
         justifyItems="start"
-        pl="50px"
+        pl={{base: "50px", lg: "0"}}
         position={{base: "fixed", lg: "static"}}
         pr={{base: "130px", lg: "0"}}
         py={{base: "200px", lg: "0"}}
