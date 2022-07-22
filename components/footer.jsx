@@ -49,21 +49,12 @@ function Footer() {
         ))}
       </Grid>
       <Flex justifyContent="center">
-        <Link mx={3}>
+        <Link href="https://www.instagram.com/cup_custom/" mx={3}>
           <ImageChakra
             backgroundColor="color1.50"
             p={2}
             rounded="100%"
             src="https://img.icons8.com/ios/50/ffffff/instagram-new--v1.png"
-            width="45px"
-          />
-        </Link>
-        <Link mx={3}>
-          <ImageChakra
-            backgroundColor="color1.50"
-            p={2}
-            rounded="100%"
-            src="https://img.icons8.com/ios/50/ffffff/facebook-new.png"
             width="45px"
           />
         </Link>

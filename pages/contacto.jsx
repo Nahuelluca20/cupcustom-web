@@ -38,28 +38,36 @@ function Contacto() {
         </Button>
       </FormControl>
       <Stack alignSelf="center" ml={{lg: "200px"}} mt={{base: "10", lg: "0"}}>
-        <Link alignItems="center" display="flex" py={3}>
+        <Link alignItems="center" display="flex" href="mailto:cupcustom22@gmail.com" py={3}>
           <Image src="https://img.icons8.com/ios-glyphs/90/004a70/gmail.png" width="35px" />
-          <Text ml={3}>cupcustom@gmail.com</Text>
+          <Text ml={3}>cupcustom22@gmail.com</Text>
         </Link>
-        <Link alignItems="center" display="flex" py={3}>
+        <Link
+          isExternal
+          alignItems="center"
+          display="flex"
+          href="https://wa.me/542617763315?text=Hola"
+          py={3}
+        >
           <Image
             src="https://img.icons8.com/material-outlined/96/004a70/whatsapp--v1.png"
             width="35px"
           />
-          <Text ml={3}>+54 222 333-444</Text>
+          <Text ml={3}>+54 261 776-3315</Text>
         </Link>
-        <Link alignItems="center" display="flex" py={3}>
+        <Link
+          isExternal
+          alignItems="center"
+          display="flex"
+          href="https://www.instagram.com/cup_custom/"
+          py={3}
+        >
           <Image src="https://img.icons8.com/ios/50/004a70/instagram-new--v1.png" width="35px" />
-          <Text ml={3}>instagram</Text>
-        </Link>
-        <Link alignItems="center" display="flex" py={3}>
-          <Image src="https://img.icons8.com/ios/50/004a70/facebook-new.png" width="35px" />
-          <Text ml={3}>facebook</Text>
+          <Text ml={3}>Cup_Custom</Text>
         </Link>
         <Link alignItems="center" display="flex" py={3}>
           <Image src="https://img.icons8.com/ios/100/004a70/map-marker--v1.png" width="35px" />
-          <Text ml={3}>Dirección del local</Text>
+          <Text ml={3}>Alvarez Condarco 1650. San Jose de Guaymallen</Text>
         </Link>
       </Stack>
     </Flex>
