@@ -3,8 +3,64 @@ import {Stack, Heading, Grid, Flex} from "@chakra-ui/react";
 import Searcher from "../components/searcher";
 import CardProduct from "../components/cardProduct";
 import Categories from "../components/categories";
+import api from "../product/api";
+import {useProductContext} from "../context/productContext";
 
-function Productos() {
+function Productos({products}) {
+  const {category, inputText} = useProductContext();
+
+  const filteredData = products.filter((product) => {
+    //if no input the return the original
+    if (inputText === "") {
+      return product;
+    }
+    //return the item which contains the user input
+    else {
+      return product.title.toLowerCase().includes(inputText);
+    }
+  });
+
+  const showSearch = () => {
+    return filteredData.map((product) => (
+      <CardProduct
+        key={product.id}
+        description={product.description}
+        img={product.img}
+        price={product.price}
+        productAdd={product}
+        title={product.title}
+      />
+    ));
+  };
+
+  const showCategory = () => {
+    if (category === "all") {
+      return products.map((product) => (
+        <CardProduct
+          key={product.id}
+          description={product.description}
+          img={product.img}
+          price={product.price}
+          productAdd={product}
+          title={product.title}
+        />
+      ));
+    } else {
+      return products
+        .filter((product) => product.type === category)
+        .map((product) => (
+          <CardProduct
+            key={product.id}
+            description={product.description}
+            img={product.img}
+            price={product.price}
+            productAdd={product}
+            title={product.title}
+          />
+        ));
+    }
+  };
+
   return (
     <Stack mt="120px" px={5}>
       <Heading as="h1" color="color1.50">
@@ -16,16 +72,7 @@ function Productos() {
           <Categories />
         </Stack>
         <Grid gap={8} gridTemplateColumns={{lg: "repeat(2, 1fr)"}}>
-          <CardProduct />
-          <CardProduct />
-          <CardProduct />
-          <CardProduct />
-          <CardProduct />
-          <CardProduct />
-          <CardProduct />
-          <CardProduct />
-          <CardProduct />
-          <CardProduct />
+          {inputText === "" ? showCategory() : showSearch()}
         </Grid>
       </Flex>
     </Stack>
@@ -33,3 +80,14 @@ function Productos() {
 }
 
 export default Productos;
+
+export async function getStaticProps() {
+  const products = await api.list();
+
+  return {
+    revalidate: 10,
+    props: {
+      products,
+    },
+  };
+}

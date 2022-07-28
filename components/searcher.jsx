@@ -1,34 +1,21 @@
-import {
-  Stack,
-  Flex,
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  InputGroup,
-  InputRightElement,
-  Input,
-  Image,
-  Button,
-} from "@chakra-ui/react";
+import {Stack, Flex, InputGroup, InputRightElement, Input, Image} from "@chakra-ui/react";
+
+import {useProductContext} from "../context/productContext";
 
 function Searcher() {
+  const {inputHandler} = useProductContext();
+
   return (
     <Stack>
       <Flex justifyContent={{base: "space-between", lg: "start"}} mt={5}>
-        <Menu>
-          <MenuButton as={Button} backgroundColor="color2.50">
-            Sublimaciones
-          </MenuButton>
-          <MenuList>
-            <MenuItem>Cerámica</MenuItem>
-            <MenuItem>Polímero</MenuItem>
-            <MenuItem>Textiles</MenuItem>
-          </MenuList>
-        </Menu>
-
-        <InputGroup ml={{lg: "20px"}} width={{base: "160px", lg: "300px"}}>
-          <Input borderColor="color2.50" borderWidth="3px" placeholder="Buscar" type="text" />
+        <InputGroup width={{base: "160px", lg: "300px"}}>
+          <Input
+            borderColor="color2.50"
+            borderWidth="3px"
+            placeholder="Buscar"
+            type="text"
+            onChange={inputHandler}
+          />
           <InputRightElement
             children={
               <Image

@@ -1,9 +1,11 @@
-import {Link, Flex, Img} from "@chakra-ui/react";
+import {Link, Flex} from "@chakra-ui/react";
 import {Image as ImageChakra} from "@chakra-ui/react";
 import {useState} from "react";
 import Image from "next/image";
 
 import Logo from "../assets/logoCup.png";
+
+import ShoppingCart from "./shoppingCart";
 
 function Nav() {
   const [menuActive, setMenuActive] = useState(false);
@@ -49,12 +51,6 @@ function Nav() {
       <Flex>
         <Link color="white" href="/" style={{textDecoration: "none"}} zIndex="5">
           <Image height="50px" src={Logo} width="120px" />
-          {/* <Text fontSize="17px" fontWeight="600">
-            Cupcustom
-          </Text>
-          <Text fontSize="17px" fontWeight="600">
-            sublimaciones
-          </Text> */}
         </Link>
       </Flex>
       <Flex
@@ -86,25 +82,8 @@ function Nav() {
             {item.text}
           </Link>
         ))}
-        {/* <Link
-            backgroundColor="color1.50"
-            display={{base: "block", lg: "none"}}
-            fontSize="18px"
-            fontWeight="500"
-            href="/contacto"
-            ml={{base: "0", lg: "3"}}
-            p={3}
-            rounded="xl"
-            style={{textDecoration: "none"}}
-          >
-            Contacto
-          </Link> */}
       </Flex>
-      <ImageChakra
-        cursor="pointer"
-        src="https://img.icons8.com/ios-glyphs/90/ffffff/shopping-cart--v1.png"
-        width="30px"
-      />
+      <ShoppingCart />
       {menuActive ? (
         <ImageChakra
           display={{lg: "none"}}
@@ -124,19 +103,6 @@ function Nav() {
           onClick={toggleMenu}
         />
       )}
-      {/* <Link
-        backgroundColor="color1.50"
-        display={{base: "none", lg: "block"}}
-        fontSize="18px"
-        fontWeight="500"
-        href="/contacto"
-        ml={{base: "0", lg: "3"}}
-        p={3}
-        rounded="xl"
-        style={{textDecoration: "none"}}
-      >
-        Contacto
-      </Link> */}
     </Flex>
   );
 }

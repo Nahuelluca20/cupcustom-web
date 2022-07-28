@@ -60,11 +60,6 @@ export default function Home() {
       </Grid>
       <Stack mt="150px" px={10} textAlign="center">
         <Heading> Nuestros Productos</Heading>
-        {/* <Text px={10} py={5}>
-          {" "}
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-          been the industrys standard dummy text ever since the
-        </Text> */}
       </Stack>
       <Grid
         alignItems="center"
@@ -155,12 +150,6 @@ export default function Home() {
                 width="100%"
               />
             </Stack>
-            {/* <ImageChakra
-              height="300px"
-              rounded="xl"
-              src="https://comunicacioneslatamjli.com/wp-content/uploads/2022/04/gorras-sublimadas-dia-de-las-madres.jpg"
-              width="500px"
-            /> */}
           </Link>
         </Stack>
         <Link href="/productos" mx={2}>

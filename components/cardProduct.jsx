@@ -1,6 +1,10 @@
-import {Stack, Text, Button, Flex, Image, Heading} from "@chakra-ui/react";
+import {Stack, Text, Flex, Image, Heading, Button} from "@chakra-ui/react";
 
-function CardProduct() {
+import {useProductContext} from "../context/productContext";
+
+function CardProduct({title, description, price, img, productAdd}) {
+  const {addProduct} = useProductContext();
+
   return (
     <Stack
       backgroundColor="white"
@@ -12,23 +16,15 @@ function CardProduct() {
       rounded="lg"
     >
       <Flex justifyContent="space-between">
-        <Image
-          height="96px"
-          rounded="lg"
-          src="https://store-goncy.vercel.app/assets/products/01.jpg"
-          width="96px"
-        />
+        <Image height="96px" rounded="lg" src={img} width="96px" />
         <Stack ml={5}>
           <Heading as="h4" color="black" fontSize="20px" fontWeight="700">
-            Taza disney
+            {title}
           </Heading>
-          <Text py={2}>
-            Aca va una breve descripción del producto Aca va una breve descripción del producto Aca
-            va una breve descripción del producto
-          </Text>
+          <Text py={2}>{description}</Text>
           <Flex alignContent="center" justifyContent="space-between">
-            <Text>$ 500</Text>
-            <Button fontSize="12px" height={6}>
+            <Text>$ {price}</Text>
+            <Button fontSize="12px" height={6} onClick={() => addProduct(productAdd)}>
               Agregar
             </Button>
           </Flex>
