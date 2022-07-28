@@ -35,10 +35,10 @@ export default function Home() {
           HOLA!
         </Heading>
         <Heading as="h1" color="color1.50" fontSize="40px">
-          Bienvenido/a a Cup Custom sublimaciones
+          Bienvenido/a a Cup Custom
         </Heading>
         <Heading as="h1" color="color1.50" fontSize="40px">
-          before getting Taxed.
+          sublimaciones
         </Heading>
         <Text color="white" mt={10} px={{lg: "300px"}}>
           Acá podrás encontrar los diseños más variados y te daremos la orientación necesaria para
