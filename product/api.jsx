@@ -7,7 +7,7 @@ export default {
   list: async () => {
     return axios
       .get(
-        "https://docs.google.com/spreadsheets/d/e/2PACX-1vSlXcul667sIwN8OIYGJEU28-s7F7dAaViyoxPV0-iQAkjsyZWG0QQ04gBLPHwH2zwnHKYDVxXf0t--/pub?output=csv",
+        "https://docs.google.com/spreadsheets/d/e/2PACX-1vRYA-GW_Z15qINSV4YOT39nU4tmwl4BLiMpEmLbTxUSlxvtXXcrsQ3eVnsq1zJdpZmnOL3HBhiFFqtz/pub?output=csv",
         {
           responseType: "blob",
         },

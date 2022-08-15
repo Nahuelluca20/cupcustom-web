@@ -11,20 +11,36 @@ function Categories() {
       category: "all",
     },
     {
-      text: "Tazas",
-      category: "tazas",
+      text: "Polimero",
+      category: "Polimero",
     },
     {
-      text: "Gorras",
-      category: "gorras",
+      text: "Textil",
+      category: "Textil",
     },
     {
-      text: "Remeras",
-      category: "remeras",
+      text: "Goma",
+      category: "Goma",
     },
     {
-      text: "Buzos",
-      category: "buzos",
+      text: "Madera",
+      category: "Madera",
+    },
+    {
+      text: "Ceramica",
+      category: "Ceramica",
+    },
+    {
+      text: "Vidrio",
+      category: "Vidrio",
+    },
+    {
+      text: "Vidrio Esmerilado",
+      category: "Vidrio Esmerilado",
+    },
+    {
+      text: "Aluminio",
+      category: "Aluminio",
     },
   ];
 

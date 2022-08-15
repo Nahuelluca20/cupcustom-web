@@ -25,7 +25,7 @@ function Productos({products}) {
       <CardProduct
         key={product.id}
         description={product.description}
-        img={product.img}
+        img={product.image}
         price={product.price}
         productAdd={product}
         title={product.title}
@@ -39,7 +39,7 @@ function Productos({products}) {
         <CardProduct
           key={product.id}
           description={product.description}
-          img={product.img}
+          img={product.image}
           price={product.price}
           productAdd={product}
           title={product.title}
@@ -47,12 +47,12 @@ function Productos({products}) {
       ));
     } else {
       return products
-        .filter((product) => product.type === category)
+        .filter((product) => product.category === category)
         .map((product) => (
           <CardProduct
             key={product.id}
             description={product.description}
-            img={product.img}
+            img={product.image}
             price={product.price}
             productAdd={product}
             title={product.title}
