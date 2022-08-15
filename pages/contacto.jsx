@@ -67,7 +67,7 @@ function Contacto() {
         </Link>
         <Link alignItems="center" display="flex" py={3}>
           <Image src="https://img.icons8.com/ios/100/004a70/map-marker--v1.png" width="35px" />
-          <Text ml={3}>Alvarez Condarco 1650. San Jose de Guaymallen</Text>
+          <Text ml={3}>Alvarez Condarco 1650. San Jose de Guaymallen, Mendoza-Argentina</Text>
         </Link>
       </Stack>
     </Flex>
